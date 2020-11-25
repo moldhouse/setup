@@ -3,6 +3,11 @@ curl https://pyenv.run | bash
 exec $SHELL
 pyenv install -v 3.8.6
 
+# add pyenv to load path, adjust for zsh
+echo 'export PATH="/root/.pyenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+
 # poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
