@@ -19,6 +19,7 @@ pyenv global 3.8.6
 
 # poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+source $HOME/.poetry/env
 
 # docker
 sudo apt-get update
