@@ -14,6 +14,9 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 exec $SHELL
 pyenv install -v 3.8.6
 
+# set global python
+pyenv global 3.8.6
+
 # poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
