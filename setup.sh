@@ -1,12 +1,17 @@
+# gcc
+sudo apt-get install gcc
+sudo apt-get install build-essential
+
 # pyenv
-curl https://pyenv.run | bash
-exec $SHELL
-pyenv install -v 3.8.6
+curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 
 # add pyenv to load path, adjust for zsh
-echo 'export PATH="/root/.pyenv/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="~/.pyenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+
+exec $SHELL
+pyenv install -v 3.8.6
 
 # poetry
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
