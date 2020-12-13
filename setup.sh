@@ -55,7 +55,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # UFW and Docker best practices, see:
 # https://stackoverflow.com/questions/30383845/what-is-the-best-practice-of-docker-ufw-under-ubuntu/46266757#46266757
-cat ./after.rules >> /etc/ufw/after.rules
+sudo bash -c "cat ./after.rules >> /etc/ufw/after.rules"
 
 # to allow port, run
 # ufw route allow proto tcp from any to any port 80
