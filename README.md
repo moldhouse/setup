@@ -1,5 +1,11 @@
 # setup
+
 Remote setup for Docker / Python development
 
-# GO
+# Go
+
 sudo bash go.sh
+
+# Docker
+
+https://docs.docker.com/engine/install/linux-postinstall/
