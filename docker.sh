@@ -40,3 +40,14 @@ sudo bash -c "cat ./after.rules >> /etc/ufw/after.rules"
 
 # to allow port, run
 # ufw route allow proto tcp from any to any port 80
+
+# Create the docker group.
+sudo groupadd docker
+
+# Add your user to the docker group.
+sudo usermod -aG docker $USER
+
+# Log out and log back in so that your group membership is re-evaluated.
+# If testing on a virtual machine, it may be necessary to restart the virtual machine for changes to take effect.
+# On Linux, you can also run the following command to activate the changes to groups:
+newgrp docker
